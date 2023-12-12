@@ -1,0 +1,61 @@
+site_name: Planship
+site_url: https://app.planship.io
+plugins:
+  - search
+  - neoteroi.mkdocsoad:
+      use_pymdownx: true
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.snippets
+nav:
+  - Guide:
+    - Welcome to Planship: index.md
+    - Code integration:
+      - Getting started: integration/index.md
+      - Register customers: integration/customers.md
+      - Subscribe customers to plans: integration/subscriptions.md
+      - Get customer entitlements: integration/entitlements.md
+      - Report usage: integration/usage.md
+    - Concepts and definitions:
+      - Products and organizations: concepts/products.md
+      - Feature levers: concepts/feature-levers.md
+      - Usage/metered levers: concepts/metered-levers.md
+      - Plans: concepts/plans.md
+      - Customers: concepts/customers.md
+  - Reference:
+    - REST API reference: main-api/reference.md
+theme:
+  name: material
+  logo: assets/planship-logo.svg
+  favicon: assets/favicon.ico
+  features:
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - content.tabs.link
+    - content.code.copy
+    - navigation.footer
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+extra_css:
+  - stylesheets/extra.css
