@@ -90,7 +90,7 @@ Then, import and initialize the client:
 
     const planship = new Planship(
         'clicker', // your Planship product slug
-        'api.planship.io', // Planship API endpoint URL
+        'https://api.planship.io', // Planship API endpoint URL
         '273N1SQ3GQFZ8JSFKIOK', // Planship API client ID
         'GDSfzPD2NEM5PEzIl1JoXFRJNZm3uAhX' // Planship API client secret
     )
@@ -103,7 +103,7 @@ Then, import and initialize the client:
     ``` js
     const planship = new Planship(
         'clicker', // your Planship product slug
-        'api.planship.io', // Planship API endpoint URL
+        'https://api.planship.io', // Planship API endpoint URL
         getAccessToken // function that returns a Promise that resolves with a valid Planship access token
     )
     ```
@@ -121,7 +121,7 @@ Then, import and initialize the client:
 
     const planship = new Planship(
         'clicker', // your Planship product slug
-        'api.planship.io', // Planship API endpoint URL
+        'https://api.planship.io', // Planship API endpoint URL
         '273N1SQ3GQFZ8JSFKIOK', // Planship API client ID
         'GDSfzPD2NEM5PEzIl1JoXFRJNZm3uAhX' // Planship API client secret
     )
@@ -134,7 +134,7 @@ Then, import and initialize the client:
     ``` js
     const planship = new Planship(
         'clicker', // your Planship product slug
-        'api.planship.io', // Planship API endpoint URL
+        'https://api.planship.io', // Planship API endpoint URL
         getAccessToken // function that returns a Promise that resolves with a valid Planship access token
     )
     ```
@@ -152,7 +152,7 @@ Then, import and initialize the client:
 
     planship = Planship(
         "clicker", # your Planship product slug
-        "api.planship.io", # Planship API endpoint URL
+        "https://api.planship.io", # Planship API endpoint URL
         "273N1SQ3GQFZ8JSFKIOK", # Planship API client ID
         "GDSfzPD2NEM5PEzIl1JoXFRJNZm3uAhX" # Planship API client secret
     )
@@ -165,7 +165,7 @@ Then, import and initialize the client:
 
     Planship planship = new Planship(
         "clicker", // your Planship product slug
-        "api.planship.io", // Planship API endpoint URL
+        "https://api.planship.io", // Planship API endpoint URL
         "273N1SQ3GQFZ8JSFKIOK", //Planship API client ID
         "GDSfzPD2NEM5PEzIl1JoXFRJNZm3uAhX" // Planship API client secret
     )
