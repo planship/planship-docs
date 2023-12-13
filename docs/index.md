@@ -6,7 +6,7 @@ Planship enables you to quickly build subscription-related logic that scales wit
 
 **1. Define pricing levers and plans**
 
-Identify your product's pricing levers; these can be any combination of [features](/concepts/feature-levers), [metered usage](/concepts/metered-levers), and [seats](/concepts/plans/#subscriber-limits-teams-and-seats). Then define them with the [Planship console](htpps://app.planship.io). Finally, use the console to create plans and connect them to your pricing levers via [entitlements](/concepts/plans/#entitlements).
+Identify your product's pricing levers; these can be any combination of [features](/concepts/feature-levers), [metered usage](/concepts/metered-levers), and [seats](/concepts/plans/#subscriber-limits-teams-and-seats). Then define them with the [Planship console](https://app.planship.io). Finally, use the console to create plans and connect them to your pricing levers via [entitlements](/concepts/plans/#entitlements).
 
 **2. Instrument your code**
 
