@@ -1,4 +1,4 @@
-site_name: Planship
+site_name: Planship » Docs
 site_url: https://app.planship.io
 plugins:
   - search
@@ -34,6 +34,7 @@ nav:
     - REST API reference: main-api/reference.md
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/planship-logo.svg
   favicon: assets/favicon.ico
   features:
@@ -57,5 +58,7 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+extra:
+  homepage: https://planship.io
 extra_css:
   - stylesheets/extra.css
