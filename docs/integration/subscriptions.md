@@ -4,8 +4,8 @@ Once a customer is [successfully registered with Planship](/integration/customer
 
     ``` js
     const subscription = await planship.createSubscription(
-        customer.id, // customer ID
-        'medium', // plan slug
+      customer.id, // customer ID
+      'medium', // plan slug
     )
     ```
 
@@ -13,8 +13,8 @@ Once a customer is [successfully registered with Planship](/integration/customer
 
     ``` ts
     const subscription: SubscriptionWithPlan = await planship.createSubscription(
-        customer.id, // customer ID
-        'medium', // plan slug
+      customer.id, // customer ID
+      'medium', // plan slug
     )
     ```
 
@@ -49,7 +49,7 @@ To find a subscription ID, simply list all subscriptions for a given customer.
 
     ``` js
     const subscriptions = await planship.listSubscriptions(
-        customer.id // customer ID
+      customer.id // customer ID
     )
     ```
 
@@ -57,7 +57,7 @@ To find a subscription ID, simply list all subscriptions for a given customer.
 
     ``` ts
     const subscription: Array<CustomerSubscriptionWithPlan> = await planship.listSubscriptions(
-        customer.id // customer ID
+      customer.id // customer ID
     )
     ```
 
@@ -65,7 +65,7 @@ To find a subscription ID, simply list all subscriptions for a given customer.
 
     ``` py
     subscriptions = planship.list_subscriptions(
-       customer.id # customer ID
+        customer.id # customer ID
     )
     ```
 
@@ -73,7 +73,7 @@ To find a subscription ID, simply list all subscriptions for a given customer.
 
     ``` java
     List<CustomerSubscriptionWithPlan> subscriptions = planship.listSubscriptions(
-       customer.getId() // customer ID
+        customer.getId() // customer ID
     )
     ```
 
@@ -87,9 +87,9 @@ When a customer upgrades their plan, you may want to apply this change immediate
 
     ``` js
     const subscription = await planship.changeSubscriptionPlan(
-        customer.id, // customer ID
-        subscription.id, // existing subscription ID
-        'large', // new plan slug
+      customer.id, // customer ID
+      subscription.id, // existing subscription ID
+      'large', // new plan slug
     )
     ```
 
@@ -97,9 +97,9 @@ When a customer upgrades their plan, you may want to apply this change immediate
 
     ``` ts
     const subscription: CustomerSubscriptionWithPlan = await planship.changeSubscriptionPlan(
-        customer.id, // customer ID
-        subscription.id, // existing subscription ID
-        'large', // new plan slug
+      customer.id, // customer ID
+      subscription.id, // existing subscription ID
+      'large', // new plan slug
     )
     ```
 
@@ -129,9 +129,9 @@ The same operation can be used when customers downgrade their subscriptions with
 
     ``` js
     const subscription = await planship.changeSubscriptionRenewPlan(
-        customer.id, // customer ID
-        subscription.id, // existing subscription ID
-        'large', // new renew plan slug
+      customer.id, // customer ID
+      subscription.id, // existing subscription ID
+      'large', // new renew plan slug
     )
     ```
 
@@ -139,9 +139,9 @@ The same operation can be used when customers downgrade their subscriptions with
 
     ``` ts
     const subscription: CustomerSubscriptionWithPlan = await planship.changeSubscriptionRenewPlan(
-        customer.id, // customer ID
-        subscription.id, // existing subscription ID
-        'large', // new renew plan slug
+      customer.id, // customer ID
+      subscription.id, // existing subscription ID
+      'large', // new renew plan slug
     )
     ```
 
@@ -171,9 +171,9 @@ Instead of downgrading a subscription to a different plan, you may want to cance
 
     ``` js
     const subscription = await planship.setSubscriptionAutoRenew(
-        customer.id, // customer ID
-        subscription.id, // existing subscription ID
-        false, // set subscription auto-renew to false
+      customer.id, // customer ID
+      subscription.id, // existing subscription ID
+      false, // set subscription auto-renew to false
     )
     ```
 
@@ -181,9 +181,9 @@ Instead of downgrading a subscription to a different plan, you may want to cance
 
     ``` ts
     const subscription: CustomerSubscriptionWithPlan = await planship.setSubscriptionAutoRenew(
-        customer.id, // customer ID
-        subscription.id, // existing subscription ID
-        false, // set subscription auto-renew to false
+      customer.id, // customer ID
+      subscription.id, // existing subscription ID
+      false, // set subscription auto-renew to false
     )
     ```
 
@@ -219,9 +219,9 @@ If your plans support team subscriptions, instead of creating a new subscription
 
     ``` js
     const newSubscriptionCustomer = await planship.addSubscriptionCustomer(
-        customer.id, // customer ID
-        subscription.id, // existing subscription ID
-        newCustomer.id, // new subscription customer ID
+      customer.id, // customer ID
+      subscription.id, // existing subscription ID
+      newCustomer.id, // new subscription customer ID
     )
     ```
 
@@ -229,9 +229,9 @@ If your plans support team subscriptions, instead of creating a new subscription
 
     ``` ts
     const newSubscriptionCustomer: SubscriptionCustomer = await planship.addSubscriptionCustomer(
-        customer.id, // customer ID
-        subscription.id, // existing subscription ID
-        newCustomer.id, // new subscription customer ID
+      customer.id, // customer ID
+      subscription.id, // existing subscription ID
+      newCustomer.id, // new subscription customer ID
     )
     ```
 
@@ -269,9 +269,9 @@ Customers can be also removed from subscriptions they belong to.
 
     ``` js
     const removedSubscriptionCustomer = await planship.removeSubscriptionCustomer(
-        customer.id, // customer ID
-        subscription.id, // existing subscription ID
-        customerToRemove.id, // ID of a customer being removed
+      customer.id, // customer ID
+      subscription.id, // existing subscription ID
+      customerToRemove.id, // ID of a customer being removed
     )
     ```
 
@@ -279,9 +279,9 @@ Customers can be also removed from subscriptions they belong to.
 
     ``` ts
     const removedSubscriptionCustomer: SubscriptionCustomerInDbBase = await planship.removeSubscriptionCustomer(
-        customer.id, // customer ID
-        subscription.id, // existing subscription ID
-        customerToRemove.id, // ID of a customer being removed
+      customer.id, // customer ID
+      subscription.id, // existing subscription ID
+      customerToRemove.id, // ID of a customer being removed
     )
     ```
 

@@ -4,9 +4,9 @@ If metered usage is a pricing dimension of your product and you've defined one o
 
     ``` js
     const meteringRecord = await planship.reportUsage(
-        customer.id, // customer ID
-        'some-metering-id', // metering ID
-        15, // reported usage
+      customer.id, // customer ID
+      'some-metering-id', // metering ID
+      15, // reported usage
     )
     ```
 
@@ -14,9 +14,9 @@ If metered usage is a pricing dimension of your product and you've defined one o
 
     ``` ts
     const meteringRecord: MeteringRecord = await planship.reportUsage(
-        customer.id, // customer ID
-        'some-metering-id', // metering ID
-        15, // reported usage
+      customer.id, // customer ID
+      'some-metering-id', // metering ID
+      15, // reported usage
     )
     ```
 
@@ -50,10 +50,10 @@ If your product defines usage levers that take advantage of *usage per bucket* o
 
     ``` js
     const meteringRecord = await planship.reportUsage(
-        customer.id, // customer ID
-        'some-metering-id', // metering ID
-        15, // reported usage
-        'bucket-name', // usage bucket
+      customer.id, // customer ID
+      'some-metering-id', // metering ID
+      15, // reported usage
+      'bucket-name', // usage bucket
     )
     ```
 
@@ -61,10 +61,10 @@ If your product defines usage levers that take advantage of *usage per bucket* o
 
     ``` ts
     const meteringRecord: MeteringRecord = await planship.reportUsage(
-        customer.id, // customer ID
-        'some-metering-id', // metering ID
-        15, // reported usage
-        'bucket-name', // usage bucket
+      customer.id, // customer ID
+      'some-metering-id', // metering ID
+      15, // reported usage
+      'bucket-name', // usage bucket
     )
     ```
 
@@ -100,8 +100,8 @@ While the remaining usage is returned as part of a customer's [entitlements](/in
 
     ``` js
     const leverUsage = await planship.geLeverUsage(
-        customer.id, // customer ID
-        'usage-lever', // lever slug
+      customer.id, // customer ID
+      'usage-lever', // lever slug
     )
     ```
 
@@ -109,8 +109,8 @@ While the remaining usage is returned as part of a customer's [entitlements](/in
 
     ``` ts
     const leverUsage: LeverUsage = await planship.geLeverUsage(
-        customer.id, // customer ID
-        'usage-lever', // lever slug
+      customer.id, // customer ID
+      'usage-lever', // lever slug
     )
     ```
 
@@ -140,22 +140,22 @@ The returned object contains the usage by bucket, by subscription, and total usa
 
     // Example usage for a lever that aggregates usage per bucket
     {
-        "total": 5,
-        "byBucket": {
-            "First project": 3,
-            "Second project": 2
-        },
-        "bySubscription": {
-            "c49c142e-310c-44b7-86bd-c4de568bc4ac": [
-                {
-                    "usage": 3,
-                    "bucket": "First project"
-                }, {
-                "usage": 2,
-                "bucket": "Second project"
-                }
-            ]
-        }
+      'total': 5,
+      'byBucket': {
+        'First project': 3,
+        'Second project': 2
+      },
+      'bySubscription': {
+        'c49c142e-310c-44b7-86bd-c4de568bc4ac': [
+          {
+            'usage': 3,
+            'bucket': 'First project'
+          }, {
+            'usage': 2,
+            'bucket': 'Second project'
+          }
+        ]
+      }
     }
     ```
 
@@ -165,21 +165,21 @@ The returned object contains the usage by bucket, by subscription, and total usa
 
     // Example usage for a lever that aggregates usage per bucket
     {
-        "total": 5,
-        "byBucket": {
-            "First project": 3,
-            "Second project": 2
+        'total': 5,
+        'byBucket': {
+          'First project': 3,
+          'Second project': 2
         },
-        "bySubscription": {
-            "c49c142e-310c-44b7-86bd-c4de568bc4ac": [
-                {
-                    "usage": 3,
-                    "bucket": "First project"
-                }, {
-                "usage": 2,
-                "bucket": "Second project"
-                }
-            ]
+        'bySubscription': {
+          'c49c142e-310c-44b7-86bd-c4de568bc4ac': [
+            {
+              'usage': 3,
+              'bucket': 'First project'
+            }, {
+              "usage": 2,
+              "bucket": "Second project"
+            }
+          ]
         }
     }
     ```
@@ -201,8 +201,8 @@ The returned object contains the usage by bucket, by subscription, and total usa
                     "usage": 3,
                     "bucket": "First project"
                 }, {
-                "usage": 2,
-                "bucket": "Second project"
+                    "usage": 2,
+                    "bucket": "Second project"
                 }
             ]
         }
@@ -218,18 +218,18 @@ The returned object contains the usage by bucket, by subscription, and total usa
         ``` js
         /// Example usage for a lever that aggregates total usage
         {
-            "total": 5,
-            "byBucket": {
-                "null": 5,
-            },
-            "bySubscription": {
-                "c49c142e-310c-44b7-86bd-c4de568bc4ac": [
-                    {
-                        "usage": 5,
-                        "bucket": null
-                    }
-                ]
-            }
+          'total': 5,
+          'byBucket': {
+            'null': 5,
+          },
+          'bySubscription': {
+            'c49c142e-310c-44b7-86bd-c4de568bc4ac': [
+              {
+                'usage': 5,
+                'bucket': null
+              }
+            ]
+          }
         }
         ```
 
@@ -238,18 +238,18 @@ The returned object contains the usage by bucket, by subscription, and total usa
         ``` ts
         /// Example usage for a lever that aggregates total usage
         {
-            "total": 5,
-            "byBucket": {
-                "null": 5,
-            },
-            "bySubscription": {
-                "c49c142e-310c-44b7-86bd-c4de568bc4ac": [
-                    {
-                        "usage": 5,
-                        "bucket": null
-                    }
-                ]
-            }
+          'total': 5,
+          'byBucket': {
+            'null': 5,
+          },
+          'bySubscription': {
+            'c49c142e-310c-44b7-86bd-c4de568bc4ac': [
+              {
+                'usage': 5,
+                'bucket': null
+              }
+            ]
+          }
         }
         ```
 
@@ -258,18 +258,18 @@ The returned object contains the usage by bucket, by subscription, and total usa
         ``` py
         # Example usage for a lever that aggregates total usage
         {
-            "total": 5,
-            "by_bucket": {
-                "null": 5,
-            },
-            "by_subscription": {
-                "c49c142e-310c-44b7-86bd-c4de568bc4ac": [
-                    {
-                        "usage": 5,
-                        "bucket": null
-                    }
-                ]
-            }
+          "total": 5,
+          "by_bucket": {
+              "null": 5,
+          },
+          "by_subscription": {
+              "c49c142e-310c-44b7-86bd-c4de568bc4ac": [
+                  {
+                      "usage": 5,
+                      "bucket": null
+                  }
+              ]
+          }
         }
         ```
 
@@ -281,8 +281,8 @@ If you have multiple levers that track usage for the same *metering ID* (E.g. ag
 
     ``` js
     const meteringIdUsage = await planship.getMeteringIdUsage(
-        customer.id, // customer ID
-        'some-metering-id', // metering ID
+      customer.id, // customer ID
+      'some-metering-id', // metering ID
     )
     ```
 
@@ -290,8 +290,8 @@ If you have multiple levers that track usage for the same *metering ID* (E.g. ag
 
     ``` ts
     const meteringIdUsage: { [key: string]: LeverUsage}  = await planship.getMeteringIdUsage(
-        customer.id, // customer ID
-        'some-metering-id', // metering ID
+      customer.id, // customer ID
+      'some-metering-id', // metering ID
     )
     ```
 

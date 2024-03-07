@@ -15,10 +15,13 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - tables
 nav:
   - Guide:
     - Welcome to Planship: index.md
-    - Code integration:
+    - Integration:
       - Getting started: integration/index.md
       - Register customers: integration/customers.md
       - Subscribe customers to plans: integration/subscriptions.md
@@ -30,6 +33,8 @@ nav:
       - Usage/metered levers: concepts/metered-levers.md
       - Plans: concepts/plans.md
       - Customers: concepts/customers.md
+    - HOWTOs:
+      - Define a product in Planship Console: howtos/console-step-by-step.md
   - Reference:
     - REST API reference: main-api/reference.md
 theme:

@@ -4,7 +4,7 @@ Once a customer is [registered with Planship](/integration/customers) and [subsc
 
     ``` js
     const entitlements = await planship.getEntitlements(
-       customer.id // customer ID
+      customer.id // customer ID
     )
     ```
 
@@ -12,7 +12,7 @@ Once a customer is [registered with Planship](/integration/customers) and [subsc
 
     ``` ts
     const entitlements: JSONValue = await planship.getEntitlements(
-       customer.id // customer ID
+      customer.id // customer ID
     )
     ```
 
@@ -28,7 +28,7 @@ Once a customer is [registered with Planship](/integration/customers) and [subsc
 
     ``` java
     Object entitlements = planship.getEntitlements(
-       customer.getId() // customer ID
+        customer.getId() // customer ID
     )
     ```
 
@@ -39,11 +39,11 @@ Entitlements are returned as a dictionary containing all feature and metered ent
 
     ``` js
     {
-        'premium-button': true,
-        'subscription-button-clicks': 75,
-        'max-projects': 5,
-        'project-types': [ 'Single', 'Random' ],
-        'analytics-panel': false,
+      'premium-button': true,
+      'subscription-button-clicks': 75,
+      'max-projects': 5,
+      'project-types': [ 'Single', 'Random' ],
+      'analytics-panel': false,
     }
     ```
 
@@ -51,11 +51,11 @@ Entitlements are returned as a dictionary containing all feature and metered ent
 
     ``` ts
     {
-        'premium-button': true,
-        'subscription-button-clicks': 75,
-        'max-projects': 5,
-        'project-types': [ 'Single', 'Random' ],
-        'analytics-panel': false,
+      'premium-button': true,
+      'subscription-button-clicks': 75,
+      'max-projects': 5,
+      'project-types': [ 'Single', 'Random' ],
+      'analytics-panel': false,
     }
     ```
 
@@ -90,18 +90,18 @@ Entitlements are returned as a dictionary containing all feature and metered ent
 
 ### Receiving entitlements via a WebSocket connection
 
-When using a Planship JavaScript SDK (`@planship/fetch` or `@planship/axios`), you can also receive entitlements via a WebSocket connection every time they change. Simply pass your callback function to the `getEntitlements` call, and Planship will notify your client when it detects any change in entitlements for the customer.
+When using a Planship JavaScript SDK (`@planship/fetch` or `@planship/axios`) or Planship React SDK (`@planship/react`), you can also receive entitlements via a WebSocket connection every time they change. Simply pass your callback function to the `getEntitlements` call, and Planship will notify your client when it detects any change in entitlements for the customer.
 
 === "JavaScript"
 
     ``` js
     function onEntitlementsChange(entitlements) {
-        // process an updated entitlements object here
+      // process an updated entitlements object here
     }
 
     const entitlements = await planship.getEntitlements(
-       customer.id, // customer ID
-       onEntitlementsChange, // entitlements changed callback
+      customer.id, // customer ID
+      onEntitlementsChange, // entitlements changed callback
     )
     ```
 
@@ -109,14 +109,28 @@ When using a Planship JavaScript SDK (`@planship/fetch` or `@planship/axios`), y
 
     ``` ts
     function onEntitlementsChange(entitlements: JSONValue): void {
-        // process an updated entitlements object here
+      // process an updated entitlements object here
     }
 
     const entitlements: JSONValue = await planship.getEntitlements(
-       customer.id, // customer ID
-       onEntitlementsChange, // entitlements changed callback
+      customer.id, // customer ID
+      onEntitlementsChange, // entitlements changed callback
     )
     ```
+
+When using the Planship React SDK [PlanshipCustomer provider](https://github.com/planship/planship-react?tab=readme-ov-file#planshipcustomer-context-provider), the callback is configured automatically to make consuming Planship entitlements in React and Next.js even simpler.
+
+```js
+import { usePlanshipCustomer } from '@planship/react'
+
+export default function YourComponent({ children }) {
+  const { entitlements } = usePlanshipCustomer()
+
+  return (
+    // Render some content using Planship customer entitlements
+  )
+}
+```
 
 ### Entitlements across multiple subscriptions
 

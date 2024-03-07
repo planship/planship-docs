@@ -1,20 +1,41 @@
-# Code integration
+# Getting started
 
-Once you define your Planship levers ([feature](/concepts/feature-levers) and/or [metered](/concepts/metered-levers)) and [plans](/concepts/plans), it's time to integrate your product with the [Planship API](/main-api/reference) to do the following:
+## Step 1: Define your product plans, levers, and entitlements
 
- 1. [Register your customers](customers)
- 2. [Manage their subscriptions](subscriptions)
- 3. [Retrieve their entitlements](entitlements)
- 4. [Report metered usage](usage)
+To get started, sign into the [Planship Console](https://app.planship.io/auth/sign-in). If you don't have a Planship account yet, [sign up](https://app.planship.io/auth/sign-up) now.
 
-## Authentication and security
+In the console, you'll do the following:
+
+- Create a [product](/concepts/products) that corresponds to your software product
+- Create [feature](/concepts/feature-levers) and/or [metered](/concepts/metered-levers) levers that map to the pricing dimensions of your product.
+- Create [plans](/concepts/plans) that map to your recurring subscription plans, one-off packages, add-ons, etc.
+- Apply pricing levers to individual plans by defining [entitlements](/concepts/plans/#entitlements).
+
+!!!tip "Want guidance?"
+    If you're new to Planship, you can follow our [Planship Console walkthrough HOWTO guide](/howtos/console-step-by-step) for a step-by-step guide on creating products, plans, levers, and entitlements.
+
+<figure markdown="span">
+  ![Plans view of the Planship app showing a list of plans along with the details of the selected plan named 'Personal'](/assets/screenshots/23-plans-view.png){ width="600" }
+  <figcaption>Defining plans and entitlements in the Planship Console</figcaption>
+</figure>
+
+## Step 2: Integrate Planship into your product code
+
+With your levers, plans, and entitlements defined in Planship, it's time to integrate your product with the [Planship API](/main-api/reference) to do the following:
+
+- [Register your customers](customers)
+- [Manage their subscriptions](subscriptions)
+- [Retrieve their entitlements](entitlements)
+- [Report metered usage](usage)
+
+### Authentication and security
 
 The Planship API uses token-based authentication where access tokens are obtained via an [OAuth2 Client Credentials flow](https://oauth.net/2/grant-types/client-credentials/). The credentials consist of a client ID and secret pair that is exchanged for a token that grants access to the resources within an organization. Client ID and secret pairs are managed on the [organization](/concepts/products#organizations) level by organization admins and collaborators. You can find them in the Planship console under your organization.
 
 !!!info
     Since Planship API calls are authenticated by tokens rather than API keys, Planship can be securly integrated into your client-side code (E.g. browser) without compromising application secrets.
 
-## Getting started with Planship SDKs
+### Getting started with Planship SDKs
 
 To get started, add a Planship SDK to your project. There are SDKs for JavaScript, Python, and Java, with more languages in the works. [Let us know if there's something you'd like to see](mailto:connect@planship.io).
 
@@ -22,6 +43,8 @@ To get started, add a Planship SDK to your project. There are SDKs for JavaScrip
     If the language or platform you use isn't currently supported by any of our SDKs, or you would rather build your own library, you can generate a Planship API client from our [OpenAPI spec](https://api.planship.io/openapi.json) using a generator like [openapi-generator](https://github.com/OpenAPITools/openapi-generator/tree/master).
 
 === "JavaScript Fetch"
+
+    The Planship [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) client is part of the planship-js SDK codebase hosted at <https://github.com/planship/planship-js> and published to NPM as [@planship/fetch](https://www.npmjs.com/package/@planship/fetch).
 
     Using `pnpm`:
     ``` console
@@ -35,6 +58,8 @@ To get started, add a Planship SDK to your project. There are SDKs for JavaScrip
 
 === "JavaScript Axios"
 
+    The Planship [Axios](https://github.com/axios/axios) client is part of the planship-js SDK codebase hosted at <https://github.com/planship/planship-js> and published to NPM as [@planship/fetch](https://www.npmjs.com/package/@planship/axios).
+
     Using `pnpm`:
     ``` console
     pnpm install @planship/axios
@@ -47,11 +72,15 @@ To get started, add a Planship SDK to your project. There are SDKs for JavaScrip
 
 === "Python"
 
+    The Planship Python SDK code is hosted at <https://github.com/planship/planship-python> and published to PyPi at <https://pypi.org/project/planship/>.
+
     ``` console
     pip install planship
     ```
 
 === "Java"
+
+    The Planship Java SDK code is hosted at <https://github.com/planship/planship-java> and available from Maven Central at <https://pypi.org/project/planship/>.
 
     **Maven users**
 
@@ -59,9 +88,9 @@ To get started, add a Planship SDK to your project. There are SDKs for JavaScrip
 
     ```xml
     <dependency>
-      <groupId>org.planship</groupId>
+      <groupId>io.planship</groupId>
       <artifactId>planship-java</artifactId>
-      <version>0.1.0</version>
+      <version>0.2.0</version>
       <scope>compile</scope>
     </dependency>
     ```
@@ -81,7 +110,22 @@ To get started, add a Planship SDK to your project. There are SDKs for JavaScrip
       }
     ```
 
-Then, import and initialize the client:
+=== "React"
+
+    The Planship client-side SDK for React uses the [React Context API](https://react.dev/learn/passing-data-deeply-with-context) to make consuming Planship data and functionality in [React](https://react.dev) and [Next.js](https://nextjs.org/) apps easier.
+    The React SDK code is hosted at <https://github.com/planship/planship-react> and published to NPM as [@planship/react](https://www.npmjs.com/package/@planship/react).
+
+    Using `pnpm`:
+    ``` console
+    pnpm install @planship/react
+    ```
+
+    Using `yarn`:
+    ``` console
+    yarn add @planship/react
+    ```
+
+Then, import and initialize it:
 
 === "JavaScript Fetch"
 
@@ -89,10 +133,11 @@ Then, import and initialize the client:
     import { Planship } from '@planship/fetch'
 
     const planship = new Planship(
-        'clicker', // your Planship product slug
-        'https://api.planship.io', // Planship API endpoint URL
-        '273N1SQ3GQFZ8JSFKIOK', // Planship API client ID
-        'GDSfzPD2NEM5PEzIl1JoXFRJNZm3uAhX' // Planship API client secret
+      'clicker-demo', // your Planship product slug
+      {
+        clientId: '273N1SQ3GQFZ8JSFKIOK', // Planship API client ID
+        clientSecret: 'GDSfzPD2NEM5PEzIl1JoXFRJNZm3uAhX' // Planship API client secret
+      }
     )
     ```
 
@@ -102,9 +147,8 @@ Then, import and initialize the client:
 
     ``` js
     const planship = new Planship(
-        'clicker', // your Planship product slug
-        'https://api.planship.io', // Planship API endpoint URL
-        getAccessToken // function that returns a Promise that resolves with a valid Planship access token
+      'clicker-demo', // your Planship product slug
+      getAccessToken // function that returns a Promise that resolves with a valid Planship access token
     )
     ```
 
@@ -120,10 +164,11 @@ Then, import and initialize the client:
     import { Planship } from '@planship/axios'
 
     const planship = new Planship(
-        'clicker', // your Planship product slug
-        'https://api.planship.io', // Planship API endpoint URL
-        '273N1SQ3GQFZ8JSFKIOK', // Planship API client ID
-        'GDSfzPD2NEM5PEzIl1JoXFRJNZm3uAhX' // Planship API client secret
+      'clicker-demo',   // your Planship product slug
+      {
+        clientId: '273N1SQ3GQFZ8JSFKIOK', // Planship API client ID
+        clientSecret: 'GDSfzPD2NEM5PEzIl1JoXFRJNZm3uAhX' // Planship API client secret
+      }
     )
     ```
 
@@ -133,9 +178,8 @@ Then, import and initialize the client:
 
     ``` js
     const planship = new Planship(
-        'clicker', // your Planship product slug
-        'https://api.planship.io', // Planship API endpoint URL
-        getAccessToken // function that returns a Promise that resolves with a valid Planship access token
+      'clicker-demo', // your Planship product slug
+      getAccessToken // function that returns a Promise that resolves with a valid Planship access token
     )
     ```
 
@@ -151,7 +195,7 @@ Then, import and initialize the client:
     from planship import Planship
 
     planship = Planship(
-        "clicker", # your Planship product slug
+        "clicker-demo", # your Planship product slug
         "https://api.planship.io", # Planship API endpoint URL
         "273N1SQ3GQFZ8JSFKIOK", # Planship API client ID
         "GDSfzPD2NEM5PEzIl1JoXFRJNZm3uAhX" # Planship API client secret
@@ -161,12 +205,54 @@ Then, import and initialize the client:
 === "Java"
 
     ``` java
-    import org.planship;
+    import io.planship;
 
     Planship planship = new Planship(
-        "clicker", // your Planship product slug
+        "clicker-demo", // your Planship product slug
         "https://api.planship.io", // Planship API endpoint URL
         "273N1SQ3GQFZ8JSFKIOK", //Planship API client ID
         "GDSfzPD2NEM5PEzIl1JoXFRJNZm3uAhX" // Planship API client secret
     )
+    ```
+
+
+=== "React"
+
+    Import and call `withPlanshipProvider` to create a Planship context provider and wrap your components with it.
+
+    ``` js
+    import { withPlanshipProvider } from '@planship/react'
+
+    function App() {
+      const PlanshipProvider = withPlanshipProvider(
+        {
+          slug: 'clicker-demo', // your Planship product slug
+          getAccessToken: getAccessToken, // function that returns a valid Planship token
+        }
+      )
+
+      return (
+        <PlanshipProvider>
+          <Page />
+        </PlanshipProvider>
+      )
+    }
+    ```
+
+    Then, import and call `usePlanship` inside your components to access the Planship API client.
+
+    ```js
+    import { usePlanship } from '@planship/react'
+
+    export default function YourComponent({ children }) {
+      const { planship } = usePlanship()
+
+      useEffect(() => {
+        // use planship API instance to call the Planship API
+      }, [])
+
+      return (
+        // Render your component using data retrieved from the Planship API
+      )
+    }
     ```

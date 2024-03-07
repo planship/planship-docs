@@ -10,11 +10,11 @@ When registering a customer with Planship, you can optionally provide their name
 
     ```javascript
     const customer = await planship.createCustomer(
-        {
-            'name': 'Jenny Doe',
-            'email': 'jenny.doe@example.com',
-            'metadata': { 'phone': '111-867-5309' }
-        }
+      {
+        'name': 'Jenny Doe',
+        'email': 'jenny.doe@example.com',
+        'metadata': { 'phone': '111-867-5309' }
+      }
     )
     ```
 
@@ -22,11 +22,11 @@ When registering a customer with Planship, you can optionally provide their name
 
     ```typescript
     const customer: Customer = await planship.createCustomer(
-        {
-            'name': 'Jenny Doe',
-            'email': 'jenny.doe@example.com',
-            'metadata': { 'phone': '111-867-5309' }
-        }
+      {
+        'name': 'Jenny Doe',
+        'email': 'jenny.doe@example.com',
+        'metadata': { 'phone': '111-867-5309' }
+      }
     )
     ```
 
@@ -63,12 +63,12 @@ If you would rather not store Planship customer IDs in your product database, yo
 
     ```javascript
     const customer = await planship.createCustomer(
-        {
-            'alternativeId': '<your_unique_customer_id>',
-            'name': 'Jenny Doe',
-            'email': 'jenny.doe@example.org',
-            'metadata': { 'phone': '111-867-5309' }
-        }
+      {
+        'alternativeId': '<your_unique_customer_id>',
+        'name': 'Jenny Doe',
+        'email': 'jenny.doe@example.org',
+        'metadata': { 'phone': '111-867-5309' }
+      }
     )
     ```
 
@@ -76,12 +76,12 @@ If you would rather not store Planship customer IDs in your product database, yo
 
     ```typescript
     const customer: Customer = await planship.createCustomer(
-        {
-            'alternativeId': '<your_unique_customer_id>',
-            'name': 'Jenny Doe',
-            'email': 'jenny.doe@example.org',
-            'metadata': { 'phone': '111-867-5309' }
-        }
+      {
+        'alternativeId': '<your_unique_customer_id>',
+        'name': 'Jenny Doe',
+        'email': 'jenny.doe@example.org',
+        'metadata': { 'phone': '111-867-5309' }
+      }
     )
     ```
 
