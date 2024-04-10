@@ -1,5 +1,5 @@
 site_name: Planship » Docs
-site_url: https://app.planship.io
+site_url: https://docs.planship.io
 plugins:
   - search
   - neoteroi.mkdocsoad:
