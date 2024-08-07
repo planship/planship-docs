@@ -2,7 +2,7 @@
 
 In Planship, a plan represents a single pricing offering of your product. A Planship plan can represent one of the tiers of a multi-tier pricing model, a one-off package that never expires, a temporary add-on to a recurring subscription plan, or anything in between.
 
-A plan has a subscription period, renewal rules, subscriber limits, and a set of entitlements that define how various [feature](/concepts/feature-levers) and [metered](/concepts/metered-levers) pricing levers are applied to customers of the plan.
+A plan has a subscription period, renewal rules, subscriber limits, and a set of [***entitlements***](#entitlements) that define how various [*feature*](/concepts/feature-levers) and [*metered*](/concepts/metered-levers) pricing levers are applied to customers of the plan.
 
 Customers can subscribe to a plan either by creating a new subscription or by joining an existing subscription (I.e. a team account).
 
