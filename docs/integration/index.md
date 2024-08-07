@@ -28,19 +28,57 @@ With your levers, plans, and entitlements defined in Planship, it's time to inte
 - [Retrieve their entitlements](entitlements)
 - [Report metered usage](usage)
 
+
+### Languages and frameworks
+
+Planship offers API client libraries in a number of languages including JavaScript/TypeScript, Python, and Java. In addition to langauage specific libraries, Planship offers SDKs that streamline integration with some popular application developement libraries and framworks, including [React](https://react.dev/) (and [Next.js](https://nextjs.org/)) as well as [Vue.js](https://vuejs.org/) (and [Nuxt](https://nuxt.com/)).
+
+[Let us know if there's something you'd like to see](mailto:connect@planship.io).
+
+!!!tip
+    If the language or platform you use isn't currently supported by any of our SDKs, or you would rather build your own library, you can generate a Planship API client from our [OpenAPI spec](https://api.planship.io/openapi.json) using a generator like [openapi-generator](https://github.com/OpenAPITools/openapi-generator/tree/master).
+
+
+### Choosing the right SDK for your project
+
+Choosing the right Planship SDK will be guided by languages and frameworks that you use in your application tech stack. Regardless whether you are fetching and enforcing entitlements, or managing customers and their subscriptions, you will likely need to call Planship API both from the backend as well as the frontend of your application.
+
+#### Backend integration
+
+For backend integration, just use one of the Planship language libraries:
+
+- **Node.js** backends like [Express.js](https://expressjs.com/) and [NestJS](https://nestjs.com/) - use [@planship/fetch](https://www.npmjs.com/package/@planship/fetch) or [@planship/axios](https://www.npmjs.com/package/@planship/axios) library
+- **Python** backends like [Flask](https://flask.palletsprojects.com/en/3.0.x/), [Django](https://www.django-rest-framework.org/), or [FastAPI](https://fastapi.tiangolo.com/) - use [planship-python](https://pypi.org/project/planship/)
+- **Java** backends like [Spring](https://spring.io/projects/spring-framework) - use [planship-java](https://mvnrepository.com/artifact/io.planship/planship-java)
+
+
+#### Frontend integration
+
+Planship offers SDKs designed specifically for some of the most populars web framworks:
+
+- **React** SPA apps - use [@planship/react](https://www.npmjs.com/package/@planship/react) SDK that uses [React Context API](https://react.dev/learn/passing-data-deeply-with-context) to expose Planship API clients and entitlements via React hooks.
+- **Next.js** apps including SSR apps - use [@planship/react](https://www.npmjs.com/package/@planship/react) SDK combined with [@planship/fetch](https://www.npmjs.com/package/@planship/fetch) library used for on the server side
+- **Vue.js** SPA apps - use [@planship/vue](https://www.npmjs.com/package/@planship/vue) plugin
+- **Nuxt** apps including universal rendering (server-side + client-side) apps - use [@planship/nuxt](https://www.npmjs.com/package/@planship/nuxt) module that bundles the [@planship/vue] plugin and its composables, and server-side services for calling Planship API from Nuxt [server routes](https://nuxt.com/docs/guide/directory-structure/server#server-routes), [server middleware](https://nuxt.com/docs/guide/directory-structure/server#server-middleware) and more.
+
+If the frontend framework that you use doesn't have a dedicated Planship SDK yet, you can just grab [@planship/fetch](https://www.npmjs.com/package/@planship/fetch) or [@planship/axios](https://www.npmjs.com/package/@planship/axios), and use it from your client-side and server-side code.
+
+
 ### Authentication and security
 
 The Planship API uses token-based authentication where access tokens are obtained via an [OAuth2 Client Credentials flow](https://oauth.net/2/grant-types/client-credentials/). The credentials consist of a client ID and secret pair that is exchanged for a token that grants access to the resources within an organization. Client ID and secret pairs are managed on the [organization](/concepts/products#organizations) level by organization admins and collaborators. You can find them in the Planship console under your organization.
+
+<figure markdown="span">
+  ![Organization view of the Planship app showing a list of products and credentials](/assets/screenshots/24-org-credentials.png){ width="600" }
+  <figcaption>Managing products and credentials</figcaption>
+</figure>
 
 !!!info
     Since Planship API calls are authenticated by tokens rather than API keys, Planship can be securly integrated into your client-side code (E.g. browser) without compromising application secrets.
 
 ### Getting started with Planship SDKs
 
-To get started, add a Planship SDK to your project. There are SDKs for JavaScript, Python, and Java, with more languages in the works. [Let us know if there's something you'd like to see](mailto:connect@planship.io).
-
-!!!tip
-    If the language or platform you use isn't currently supported by any of our SDKs, or you would rather build your own library, you can generate a Planship API client from our [OpenAPI spec](https://api.planship.io/openapi.json) using a generator like [openapi-generator](https://github.com/OpenAPITools/openapi-generator/tree/master).
+To get started, add a desired Planship library or SDK to your project.
 
 === "JavaScript Fetch"
 
