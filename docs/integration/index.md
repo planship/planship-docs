@@ -4,6 +4,10 @@
 
 To get started, sign into the [Planship Console](https://app.planship.io/auth/sign-in). If you don't have a Planship account yet, [sign up](https://app.planship.io/auth/sign-up) now.
 
+!!!tip "Using Stripe?"
+    If you use Stripe, you can manage all of your Planship directly from the Stripe dashboard by using the Planship app for Stripe. Follow our [Stripe integration HOWTO guide](../howtos/use-planship-with-stripe.md) to get started.
+
+
 In the console, you'll do the following:
 
 - Create a [product](../concepts/products.md) that corresponds to your software product

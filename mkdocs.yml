@@ -36,6 +36,7 @@ nav:
       - Customers: concepts/customers.md
     - HOWTOs:
       - Define a product in Planship Console: howtos/console-step-by-step.md
+      - Use Planship with Stripe: howtos/use-planship-with-stripe.md
   - Reference:
     - REST API reference: main-api/reference.md
 theme:
