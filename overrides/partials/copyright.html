@@ -22,15 +22,15 @@
 
 <!-- Copyright and theme information -->
 <!-- Customization: display the copyright partial as a flex box -->
-<div class="md-copyright" style="display: flex; justify-content: space-between; width: 100%;">
+<div class="md-copyright footer grid grid-flow-row w-full md:grid-flow-col gap-y-2">
   <!-- Customization: Planship copyright and legal notice links, remove the default copyright section -->
-  <div class="md-copyright__highlight">
+  <div class="md-copyright__highlight max-md:mx-auto">
     © 2024 Planship &bull; <a href="https://planship.io/policies/privacy-policy" target="_blank">Privacy Policy</a> &bull; <a href="https://planship.io/policies/terms-of-service" target="_blank">Terms of Service</a>
   </div>
 
   {% if not config.extra.generator == false %}
   <!-- Customization: Put Made with Material for MkDocs in a single div-->
-  <div>
+  <div class="max-md:mx-auto md:justify-self-end">
     Made with
     <a
       href="https://squidfunk.github.io/mkdocs-material/"

@@ -67,3 +67,4 @@ extra:
   homepage: https://planship.io
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/output.css
