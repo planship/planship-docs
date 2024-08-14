@@ -1,5 +1,6 @@
 site_name: Planship » Docs
 site_url: https://docs.planship.io
+dev_addr: localhost:5175
 plugins:
   - search
   - neoteroi.mkdocsoad:
