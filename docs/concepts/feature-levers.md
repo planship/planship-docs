@@ -21,12 +21,12 @@ The default value of a lever is the value used for implicit entitlements across 
 
 Planship comes with a number of built-in feature types to support feature levers commonly used in SaaS pricing.
 
-#### Boolean
+#### Feature flag
 
-Simple on/off boolean features where a given feature is either available on a given plan or not.
+A simple flag to indicate whether a given feature is available on a given plan or not.
 
 !!! Tip
-    A boolean lever can be implicily turned on or off across all plans by setting the lever's default value to `true` or `false`.
+    A feature flag lever can be implicily turned on or off across all plans by setting the lever's default value to `true` or `false`.
 
 #### Integer
 

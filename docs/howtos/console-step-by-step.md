@@ -54,7 +54,7 @@ The new product is empty; it has no plans or levers defined in it. Let's start b
 On the product page, switch to the *Levers* tab, and click the *New lever* button. This will open the *Create a lever* dialog. Enter a name for the new lever (*Integrations*), and select *List* as the lever type.
 
 !!!note
-    Just like the product, the new lever's name will be used by Planship to generate a `slug` that will become the unique identifier for it in Planship API operations. For instance, lever slugs are used as keys in the [entitlements dictionary returned by Planship](/integrations/entitlements).
+    Just like the product, the new lever's name will be used by Planship to generate a `slug` that will become the unique identifier for it in Planship API operations. For instance, lever slugs are used as keys in the [entitlements dictionary returned by Planship](/integration/entitlements).
 
 <figure markdown="span">
   ![Planship console screenshot showing a new 'Integrations' list lever creation using the `Create a lever` dialog ](/assets/screenshots/03-create-levers-integrations-2.png){ width="600" }
