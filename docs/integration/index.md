@@ -31,37 +31,37 @@ With your levers, plans, and entitlements defined in Planship, it's time to inte
 
 ### Languages and frameworks
 
-Planship offers API client libraries in a number of languages including JavaScript/TypeScript, Python, and Java. In addition to langauage specific libraries, Planship offers SDKs that streamline integration with some popular application developement libraries and framworks, including [React](https://react.dev/) (and [Next.js](https://nextjs.org/)) as well as [Vue.js](https://vuejs.org/) (and [Nuxt](https://nuxt.com/)).
+Planship offers API client libraries for a number of languages including JavaScript/TypeScript, Python, and Java. In addition to langauage-specific libraries, Planship offers SDKs that streamline integration with popular application-developement libraries and frameworks, including [React](https://react.dev/) (and [Next.js](https://nextjs.org/)) as well as [Vue.js](https://vuejs.org/) (and [Nuxt](https://nuxt.com/)).
 
-[Let us know if there's something you'd like to see](mailto:connect@planship.io).
+[Let us know if there's a language or framework you'd like for us to officially support](mailto:connect@planship.io).
 
 !!!tip
-    If the language or platform you use isn't currently supported by any of our SDKs, or you would rather build your own library, you can generate a Planship API client from our [OpenAPI spec](https://api.planship.io/openapi.json) using a generator like [openapi-generator](https://github.com/OpenAPITools/openapi-generator/tree/master).
+    If the language or framework you use isn't currently supported by one of our SDKs, or you would rather build your own library, you can generate a Planship API client from our [OpenAPI spec](https://api.planship.io/openapi.json) using a generator like [openapi-generator](https://github.com/OpenAPITools/openapi-generator/tree/master).
 
 
 ### Choosing the right SDK for your project
 
-Choosing the right Planship SDK will be guided by languages and frameworks that you use in your application tech stack. Regardless whether you are fetching and enforcing entitlements, or managing customers and their subscriptions, you will likely need to call Planship API both from the backend as well as the frontend of your application.
+The Planship SDKs you use depend on the languages and frameworks in your application's tech stack. Regardless of whether you are fetching and enforcing entitlements or managing customers and their subscriptions, you will likely need to call the Planship API from both the backend and frontend of your application.
 
 #### Backend integration
 
-For backend integration, just use one of the Planship language libraries:
+For backend integration, use one of the Planship language libraries:
 
-- **Node.js** backends like [Express.js](https://expressjs.com/) and [NestJS](https://nestjs.com/) - use [@planship/fetch](https://www.npmjs.com/package/@planship/fetch) or [@planship/axios](https://www.npmjs.com/package/@planship/axios) library
-- **Python** backends like [Flask](https://flask.palletsprojects.com/en/3.0.x/), [Django](https://www.django-rest-framework.org/), or [FastAPI](https://fastapi.tiangolo.com/) - use [planship-python](https://pypi.org/project/planship/)
-- **Java** backends like [Spring](https://spring.io/projects/spring-framework) - use [planship-java](https://mvnrepository.com/artifact/io.planship/planship-java)
+- **Node.js**: Use [@planship/fetch](https://www.npmjs.com/package/@planship/fetch) or [@planship/axios](https://www.npmjs.com/package/@planship/axios) for backends built with frameworks like [Express.js](https://expressjs.com/) and [NestJS](https://nestjs.com/).
+- **Python**: Use [planship-python](https://pypi.org/project/planship/) for backends built with frameworks like [Flask](https://flask.palletsprojects.com/en/3.0.x/), [Django](https://www.django-rest-framework.org/), and [FastAPI](https://fastapi.tiangolo.com/).
+- **Java**: Use [planship-java](https://mvnrepository.com/artifact/io.planship/planship-java) for backends built with frameworks like [Spring](https://spring.io/projects/spring-framework).
 
 
 #### Frontend integration
 
-Planship offers SDKs designed specifically for some of the most populars web framworks:
+Planship offers SDKs designed specifically for some of the most populars web frameworks:
 
-- **React** SPA apps - use [@planship/react](https://www.npmjs.com/package/@planship/react) SDK that uses [React Context API](https://react.dev/learn/passing-data-deeply-with-context) to expose Planship API clients and entitlements via React hooks.
-- **Next.js** apps including SSR apps - use [@planship/react](https://www.npmjs.com/package/@planship/react) SDK combined with [@planship/fetch](https://www.npmjs.com/package/@planship/fetch) library used for on the server side
-- **Vue.js** SPA apps - use [@planship/vue](https://www.npmjs.com/package/@planship/vue) plugin
-- **Nuxt** apps including universal rendering (server-side + client-side) apps - use [@planship/nuxt](https://www.npmjs.com/package/@planship/nuxt) module that bundles the [@planship/vue] plugin and its composables, and server-side services for calling Planship API from Nuxt [server routes](https://nuxt.com/docs/guide/directory-structure/server#server-routes), [server middleware](https://nuxt.com/docs/guide/directory-structure/server#server-middleware) and more.
+- **React** SPA apps: Use [@planship/react](https://www.npmjs.com/package/@planship/react), which uses the [React Context API](https://react.dev/learn/passing-data-deeply-with-context) to expose Planship API clients and entitlements via React hooks.
+- **Next.js** apps including SSR apps: Use [@planship/react](https://www.npmjs.com/package/@planship/react) for frontend operations and [@planship/fetch](https://www.npmjs.com/package/@planship/fetch) for server-side operations.
+- **Vue.js** SPA apps: Use [@planship/vue](https://www.npmjs.com/package/@planship/vue).
+- **Nuxt** apps including universal (server-side + client-side) apps: Use [@planship/nuxt](https://www.npmjs.com/package/@planship/nuxt), which includes [@planship/vue](https://www.npmjs.com/package/@planship/vue) and its composables along with server-side services for calling the Planship API from Nuxt [server routes](https://nuxt.com/docs/guide/directory-structure/server#server-routes), [server middleware](https://nuxt.com/docs/guide/directory-structure/server#server-middleware), and more.
 
-If the frontend framework that you use doesn't have a dedicated Planship SDK yet, you can just grab [@planship/fetch](https://www.npmjs.com/package/@planship/fetch) or [@planship/axios](https://www.npmjs.com/package/@planship/axios), and use it from your client-side and server-side code.
+If the frontend framework that you use doesn't have a dedicated Planship SDK yet, you can grab [@planship/fetch](https://www.npmjs.com/package/@planship/fetch) or [@planship/axios](https://www.npmjs.com/package/@planship/axios) and use them from your client-side and server-side code.
 
 
 ### Authentication and security
@@ -78,7 +78,7 @@ The Planship API uses token-based authentication where access tokens are obtaine
 
 ### Getting started with Planship SDKs
 
-To get started, add a desired Planship library or SDK to your project.
+To get started, add the desired Planship library or SDK to your project.
 
 === "JavaScript Fetch"
 

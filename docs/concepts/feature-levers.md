@@ -43,4 +43,4 @@ List levers provide a list of values and are useful for features that map to one
 
 #### Enum
 
-Enum levers are useful for representing features tied to values that must come from a predefined list (E.g. Data retention period that can be 3, 6, or 12 months).
+Enum levers are useful for representing features tied to values that must come from a predefined list (E.g. A data retention period that can be `3`, `6`, or `12` months).
