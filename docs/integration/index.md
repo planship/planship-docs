@@ -6,27 +6,27 @@ To get started, sign into the [Planship Console](https://app.planship.io/auth/si
 
 In the console, you'll do the following:
 
-- Create a [product](/concepts/products) that corresponds to your software product
-- Create [feature](/concepts/feature-levers) and/or [metered](/concepts/metered-levers) levers that map to the pricing dimensions of your product.
-- Create [plans](/concepts/plans) that map to your recurring subscription plans, one-off packages, add-ons, etc.
-- Apply pricing levers to individual plans by defining [entitlements](/concepts/plans/#entitlements).
+- Create a [product](../concepts/products.md) that corresponds to your software product
+- Create [feature](../concepts/feature-levers.md) and/or [metered](../concepts/metered-levers.md) levers that map to the pricing dimensions of your product.
+- Create [plans](../concepts/plans.md) that map to your recurring subscription plans, one-off packages, add-ons, etc.
+- Apply pricing levers to individual plans by defining [entitlements](../concepts/plans.md#entitlements).
 
 !!!tip "Want guidance?"
-    If you're new to Planship, you can follow our [Planship Console walkthrough HOWTO guide](/howtos/console-step-by-step) for a step-by-step guide on creating products, plans, levers, and entitlements.
+    If you're new to Planship, you can follow our [Planship Console walkthrough HOWTO guide](../howtos/console-step-by-step.md) for a step-by-step guide on creating products, plans, levers, and entitlements.
 
 <figure markdown="span">
-  ![Plans view of the Planship app showing a list of plans along with the details of the selected plan named 'Personal'](/assets/screenshots/23-plans-view.png){ width="600" }
+  ![Plans view of the Planship app showing a list of plans along with the details of the selected plan named 'Personal'](../assets/screenshots/23-plans-view.png){ width="600" }
   <figcaption>Defining plans and entitlements in the Planship Console</figcaption>
 </figure>
 
 ## Step 2: Integrate Planship into your product code
 
-With your levers, plans, and entitlements defined in Planship, it's time to integrate your product with the [Planship API](/main-api/reference) to do the following:
+With your levers, plans, and entitlements defined in Planship, it's time to integrate your product with the [Planship API](../main-api/reference.md) to do the following:
 
-- [Register your customers](customers)
-- [Manage their subscriptions](subscriptions)
-- [Retrieve their entitlements](entitlements)
-- [Report metered usage](usage)
+- [Register your customers](customers.md)
+- [Manage their subscriptions](subscriptions.md)
+- [Retrieve their entitlements](entitlements.md)
+- [Report metered usage](usage.md)
 
 
 ### Languages and frameworks
@@ -66,10 +66,10 @@ If the frontend framework that you use doesn't have a dedicated Planship SDK yet
 
 ### Authentication and security
 
-The Planship API uses token-based authentication where access tokens are obtained via an [OAuth2 Client Credentials flow](https://oauth.net/2/grant-types/client-credentials/). The credentials consist of a client ID and secret pair that is exchanged for a token that grants access to the resources within an organization. Client ID and secret pairs are managed on the [organization](/concepts/products#organizations) level by organization admins and collaborators. You can find them in the Planship console under your organization.
+The Planship API uses token-based authentication where access tokens are obtained via an [OAuth2 Client Credentials flow](https://oauth.net/2/grant-types/client-credentials/). The credentials consist of a client ID and secret pair that is exchanged for a token that grants access to the resources within an organization. Client ID and secret pairs are managed on the [organization](../concepts/products.md#organizations) level by organization admins and collaborators. You can find them in the Planship console under your organization.
 
 <figure markdown="span">
-  ![Organization view of the Planship app showing a list of products and credentials](/assets/screenshots/24-org-credentials.png){ width="600" }
+  ![Organization view of the Planship app showing a list of products and credentials](../assets/screenshots/24-org-credentials.png){ width="600" }
   <figcaption>Managing products and credentials</figcaption>
 </figure>
 

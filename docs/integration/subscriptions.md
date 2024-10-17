@@ -1,4 +1,4 @@
-Once a customer is [successfully registered with Planship](/integration/customers), you can subscribe them to a [Planship plan](/concepts/plans) by creating a new subscription for them using their ID and the slug of the desired plan.
+Once a customer is [successfully registered with Planship](customers.md), you can subscribe them to a [Planship plan](../concepts/plans.md) by creating a new subscription for them using their ID and the slug of the desired plan.
 
 === "JavaScript"
 
@@ -37,7 +37,7 @@ Once a customer is [successfully registered with Planship](/integration/customer
     ```
 
 !!!info
-    The *customer ID* can be the Planship-generated customer ID or your own ID provided to Planship as an [alternative ID](/integration/customers#using-your-own-customer-id).
+    The *customer ID* can be the Planship-generated customer ID or your own ID provided to Planship as an [alternative ID](customers.md#using-your-own-customer-id).
 
 The returned `subscription` object contains a subscription `id`, which is required when managing and modifying subscriptions. However, unlike customer IDs, subscription IDs don't need to be persisted in your product database as you can retrieve them programatically for a customer.
 
@@ -123,7 +123,7 @@ When a customer upgrades their plan, you may want to apply this change immediate
     )
     ```
 
-The same operation can be used when customers downgrade their subscriptions with an immediate effect (usually accompanied by a refund). However, downgrades are often processed at the end of a subscription period. This way, customers continue to have access to all of the product resources (like [features](/concepts/feature-levers) and/or [usage limits](/concepts/metered-levers)) they already paid for. To accomplish this, change the subscription's renew plan instead.
+The same operation can be used when customers downgrade their subscriptions with an immediate effect (usually accompanied by a refund). However, downgrades are often processed at the end of a subscription period. This way, customers continue to have access to all of the product resources (like [features](../concepts/feature-levers.md) and/or [usage limits](../concepts/metered-levers.md)) they already paid for. To accomplish this, change the subscription's renew plan instead.
 
 === "JavaScript"
 
@@ -257,7 +257,7 @@ If your plans support team subscriptions, instead of creating a new subscription
 
 Please note that this operation requires two customer IDs:
 
- - ID of an existing subscription customer to execute the operation, has to be an [administrator](/concepts/plans#subscription-administrators) of the subscription with a given ID
+ - ID of an existing subscription customer to execute the operation, has to be an [administrator](../concepts/plans.md#subscription-administrators) of the subscription with a given ID
  - ID of a customer to be added to the subscription with a given ID
 
 

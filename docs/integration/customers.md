@@ -1,4 +1,4 @@
-Registering a [customer](/concepts/customers) with Planship enables your product to do the following:
+Registering a [customer](../concepts/customers.md) with Planship enables your product to do the following:
 
  - Subscribe/unsubscribe customers to Planship plans
  - Retrieve feature and metered entitlements for a customer

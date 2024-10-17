@@ -1,4 +1,4 @@
-Once a customer is [registered with Planship](/integration/customers) and [subscribed to one or more Planship plans](/integration/subscriptions), you can check their entitlements.
+Once a customer is [registered with Planship](customers.md) and [subscribed to one or more Planship plans](subscriptions.md), you can check their entitlements.
 
 === "JavaScript"
 
@@ -86,7 +86,7 @@ Entitlements are returned as a dictionary containing all feature and metered ent
 
 !!!note
 
-    Metered lever entitlement values represent the amount of metered usage available to a customer. For instance, if a customer has a limit of 100 SMS messages per subscription period, and they've already used 25 messages in the current period, the entitlements value for the lever (`subscription-sms-messages`) will be 75. If you'd like to get the current usage for a customer, see [`getLeverUsage`](/integration/usage/#check-current-usage).
+    Metered lever entitlement values represent the amount of metered usage available to a customer. For instance, if a customer has a limit of 100 SMS messages per subscription period, and they've already used 25 messages in the current period, the entitlements value for the lever (`subscription-sms-messages`) will be 75. If you'd like to get the current usage for a customer, see [`getLeverUsage`](usage.md#check-current-usage).
 
 ### Receiving entitlements via a WebSocket connection
 

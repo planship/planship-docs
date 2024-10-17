@@ -2,11 +2,11 @@
 
 In Planship, a customer represents a customer of your product. It can be an individual, another business, or anything else that makes sense for your business.
 
-Once you [register a customer](/integration/customers) with Planship, you can [subscribe them to plans](/integration/subscriptions), [report and track their usage](/integration/usage), and [retrieve feature and usage entitlements](/integration/entitlements).
+Once you [register a customer](../integration/customers.md) with Planship, you can [subscribe them to plans](../integration/subscriptions.md), [report and track their usage](../integration/usage.md), and [retrieve feature and usage entitlements](../integration/entitlements.md).
 
 ## Customer attributes
 
-When you [register a customer with Planship](/integration/customers), you can optionally provide their _name_, _email_, _metadata_ and an _alternative ID_. If you'd rather not store any customer data in Planship, you can leave them empty.
+When you [register a customer with Planship](../integration/customers.md), you can optionally provide their _name_, _email_, _metadata_ and an _alternative ID_. If you'd rather not store any customer data in Planship, you can leave them empty.
 
 ## Using an alternative customer ID
 

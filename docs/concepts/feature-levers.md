@@ -1,6 +1,6 @@
 # Feature levers
 
-Feature levers allow or limit access to certain features of your product according to a customer's subscription plan. In Planship, this is accomplished by the combination of _levers_ that define features and default values and [_entitlements_](/concepts/plans/#entitlements) that specify specific limits or allowances for these levers on individal plans.
+Feature levers allow or limit access to certain features of your product according to a customer's subscription plan. In Planship, this is accomplished by the combination of _levers_ that define features and default values and [_entitlements_](plans.md#entitlements) that specify specific limits or allowances for these levers on individal plans.
 
 !!! Example
     Imagine a product that does parallel processing of customer data, where different pricing tiers offer different levels of processing concurrency. To accomplish this with Planship, you would define an *execution-concurrency* lever and then create entitlements that specify desired *execution-concurrency* values on different plans (E.g. `1`, `10`, and `100` on "Free," "Personal," and "Business" plans respectively).
@@ -30,7 +30,7 @@ A simple flag to indicate whether a given feature is available on a given plan o
 
 #### Integer
 
-Integer levers represent numerical features and are useful for defining limits on **unmetered** product resources ([For handling **metered** product resources, see _metered levers_](/concepts/metered-levers)). In addition to the *default value*, the following configuration options are available:
+Integer levers represent numerical features and are useful for defining limits on **unmetered** product resources ([For handling **metered** product resources, see _metered levers_](metered-levers.md)). In addition to the *default value*, the following configuration options are available:
 
 - *min* - minimum allowed entitlement value (default: 0)
 - *max* - maxium allowed entitlement value (default: 100)

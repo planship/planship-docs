@@ -1,4 +1,4 @@
-If metered usage is a pricing dimension of your product and you've defined one or more [metered levers](/concepts/metered-levers), you will likely need to report customer usage to Planship. Metered usage is reported for a [*metering ID*](/concepts/metered-levers#metering-id), which is associated with one or more metered levers.
+If metered usage is a pricing dimension of your product and you've defined one or more [metered levers](../concepts/metered-levers.md), you will likely need to report customer usage to Planship. Metered usage is reported for a [*metering ID*](../concepts/metered-levers.md#metering-id), which is associated with one or more metered levers.
 
 === "JavaScript"
 
@@ -44,7 +44,7 @@ Every time usage is reported, Planship creates a metering record for traceabilit
 
 ### Reporting bucketed usage
 
-If your product defines usage levers that take advantage of *usage per bucket* or *unique buckets* [aggregation formulas](/concepts/metered-levers#formula), you will want to include a *bucket* identifier when reporting usage to Planship.
+If your product defines usage levers that take advantage of *usage per bucket* or *unique buckets* [aggregation formulas](../concepts/metered-levers.md#formula), you will want to include a *bucket* identifier when reporting usage to Planship.
 
 === "JavaScript"
 
@@ -94,7 +94,7 @@ The specified bucket value becomes part of the metering record and is used by Pl
 
 ## Check current usage
 
-While the remaining usage is returned as part of a customer's [entitlements](/integration/entitlements), you may want to retrieve the actual, current customer usage for a given metered usage lever.
+While the remaining usage is returned as part of a customer's [entitlements](entitlements.md), you may want to retrieve the actual, current customer usage for a given metered usage lever.
 
 === "JavaScript"
 

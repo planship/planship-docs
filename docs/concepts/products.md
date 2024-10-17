@@ -1,6 +1,6 @@
 ## Products
 
-In Planship, a product is a container that defines pricing [plans](/concepts/plans) along with [feature](/concepts/feature-levers) and [metered](/concepts/metered-levers) levers, and it typically represents a single product offering for your customers. However, a Planship product can also represent a part of a larger product, a group of products, or whatever makes sense for your business.
+In Planship, a product is a container that defines pricing [plans](plans.md) along with [feature](feature-levers.md) and [metered](metered-levers.md) levers, and it typically represents a single product offering for your customers. However, a Planship product can also represent a part of a larger product, a group of products, or whatever makes sense for your business.
 
 !!! Example
     Imagine a large product that is marketed as a single solution and is built on a single tech stack, but in reality consists of several distinct offerings that are priced independently of one another.
@@ -11,7 +11,7 @@ Every product has a unique _name_, which is used to automatically generate a _sl
 
 ## Organizations
 
-An organization is a top level container for your Planship products and [customers](/concepts/customers), and it typically represents your business or a part of it (E.g. a division of a larger company).
+An organization is a top level container for your Planship products and [customers](customers.md), and it typically represents your business or a part of it (E.g. a division of a larger company).
 
 ## Users
 
