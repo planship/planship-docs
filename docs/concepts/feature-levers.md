@@ -35,7 +35,7 @@ Integer levers represent numerical features and are useful for defining limits o
 - *min* - minimum allowed entitlement value (default: 0)
 - *max* - maxium allowed entitlement value (default: 100)
 - *step* - entitlement value step increment (default: 0)
-- *infinite* - value that represents an inifinite entitlement value (default: -1)
+- *infinite* - value that represents an infinite entitlement value (default: -1)
 
 #### List
 

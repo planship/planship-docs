@@ -6,7 +6,7 @@ Metered levers (Also known as usage-based, consumption-based, or pay-as-you-go p
     Imagine a product that offers subscription plans priced according to monthly API call volume. It offers up to 1, 2, and 5 million API calls per month on "Free," "Personal," and "Business" plans respectively. To accomplish this with Planship, you'd define a metered lever named *api-call* that aggregates the total reported usage over a subscription period of one month, and then create entitlements on each plan that specifies the desired *api-call* limit (1 million on Free, 2 million on Personal, and 5 million on Business).
 
 !!! tip "Pay-as-you-go"
-    If you simply want to meter usage and don't need to enforce any sort of limiting on the usage, you can do so by defining a metered lever with a [default limit](metered-levers.md#default-limit) of `-1` (inifinite) and reporting usage without defining explicit entitlements.
+    If you simply want to meter usage and don't need to enforce any sort of limiting on the usage, you can do so by defining a metered lever with a [default limit](metered-levers.md#default-limit) of `-1` (infinite) and reporting usage without defining explicit entitlements.
 
 ## Usage reporting
 
