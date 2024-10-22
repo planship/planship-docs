@@ -94,3 +94,7 @@ Existing _explicit entitlements_ can be modified or deleted in the same way.
 ## Step 3 - Add Planship integration to your product code
 
 With levers and entitlements defined, you can integrate Planship into your product code by following our [integration guide](../integration/index.md#step-2-integrate-planship-into-your-product-code). Please note, that when using Planship with Stripe you won't need to register customers and create/delete their subscriptions via Planship API. Customers and subscriptions are managed by Stripe, and automatically mirrored by Planship.
+
+- [Choosing the right Planship SDK for your project](../integration/index.md#choosing-the-right-sdk-for-your-project)
+- [Retrieving customer entitlements](../integration/entitlements.md)
+- [Reporting usage for metered levers](../integration/usage.md)

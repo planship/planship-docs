@@ -1,3 +1,8 @@
+!!! tip "Using Stripe?"
+    If you already use the Planship Stripe app, all of your customers and their subscriptions are automatically mirrored in Planship. Head straight to [Get Customer Entitlements](./entitlements.md) and [Report usage](./usage.md) integration guides.
+    <br/><br/>
+    Interested in the Planship Stripe app? Head to our [Stripe integration HOWTO guide](../howtos/use-planship-with-stripe.md) to learn more and get started.
+
 Registering a [customer](../concepts/customers.md) with Planship enables your product to do the following:
 
  - Subscribe/unsubscribe customers to Planship plans
