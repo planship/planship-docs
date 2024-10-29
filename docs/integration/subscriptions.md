@@ -1,9 +1,9 @@
-!!! tip "Using Stripe?"
-    If you already use the Planship Stripe app, all of your customers and their subscriptions are automatically mirrored in Planship. Head straight to [Get Customer Entitlements](./entitlements.md) and [Report usage](./usage.md) integration guides.
-    <br/><br/>
-    Interested in the Planship Stripe app? Head to our [Stripe integration HOWTO guide](../howtos/use-planship-with-stripe.md) to learn more and get started.
-
 Once a customer is [successfully registered with Planship](customers.md), you can subscribe them to a [Planship plan](../concepts/plans.md) by creating a new subscription for them using their ID and the slug of the desired plan.
+
+??? question "Using Stripe?"
+    If you use the Planship Stripe app, all of your customers and their subscriptions are automatically mirrored in Planship. You can go straight to the [Getting Customer Entitlements](entitlements.md) and [Reporting Usage](usage.md) integration guides.
+    <br/><br/>
+    Interested in the Planship Stripe app? Head to our [Stripe integration HOW-TO guide](../howtos/use-planship-with-stripe.md) to learn more.
 
 === "JavaScript"
 
@@ -41,10 +41,10 @@ Once a customer is [successfully registered with Planship](customers.md), you ca
     )
     ```
 
-!!!info
-    The *customer ID* can be the Planship-generated customer ID or your own ID provided to Planship as an [alternative ID](customers.md#using-your-own-customer-id).
-
 The returned `subscription` object contains a subscription `id`, which is required when managing and modifying subscriptions. However, unlike customer IDs, subscription IDs don't need to be persisted in your product database as you can retrieve them programatically for a customer.
+
+!!! info
+    The *customer ID* can be the Planship-generated customer ID or your own ID provided to Planship as an [alternative ID](customers.md#using-your-own-customer-id).
 
 ### Listing customer subscriptions
 
@@ -311,5 +311,5 @@ Customers can be also removed from subscriptions they belong to.
 
 Just as when adding a customer to a subscription, two customer IDs are required.
 
-!!!info
+!!! info
     Customers can remove themselves from a subscription as long as they are not the only administrator or subscriber of the subscription.

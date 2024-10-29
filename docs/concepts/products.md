@@ -2,7 +2,7 @@
 
 In Planship, a product is a container that defines pricing [plans](plans.md) along with [feature](feature-levers.md) and [metered](metered-levers.md) levers, and it typically represents a single product offering for your customers. However, a Planship product can also represent a part of a larger product, a group of products, or whatever makes sense for your business.
 
-!!! Example
+!!! example
     Imagine a large product that is marketed as a single solution and is built on a single tech stack, but in reality consists of several distinct offerings that are priced independently of one another.
 
 ### Name and slug

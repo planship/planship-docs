@@ -2,7 +2,7 @@
 
 Metered levers (Also known as usage-based, consumption-based, or pay-as-you-go pricing) track usage and set limits on the metered resources of your product according to customers' subscription plans. In Planship, metered levers define the usage that's tracked and how it's aggregated, and [entitlements](plans.md#entitlements) limit that usage on specific plans.
 
-!!! Example
+!!! example
     Imagine a product that offers subscription plans priced according to monthly API call volume. It offers up to 1, 2, and 5 million API calls per month on "Free," "Personal," and "Business" plans respectively. To accomplish this with Planship, you'd define a metered lever named *api-call* that aggregates the total reported usage over a subscription period of one month, and then create entitlements on each plan that specifies the desired *api-call* limit (1 million on Free, 2 million on Personal, and 5 million on Business).
 
 !!! tip "Pay-as-you-go"
@@ -16,7 +16,7 @@ In order for usage to be tracked and aggregated, it has to be [reported to Plans
 
 Usage buckets allow grouping of usage within a single metering ID. [Bucket names are specified when reporting usage to Planship via the API](../integration/usage.md#reporting-bucketed-usage), and bucket-name tracking enables more complex usage aggregation scenarios.
 
-!!! Example
+!!! example
     Suppose you have a product that allows customers to create projects. Within these projects, they can make API calls, which are limited by their plan. While API calls are aggregated across all projects, it may be useful to also track these API calls by the project that generated them. In this case, you'd report usage along with a bucket name corresponding to the project that generated it.
 
 ## Creating a lever
@@ -44,12 +44,12 @@ _Special values_
 
 A *metering ID* is a string that identifies raw, metered usage reported by the product. Every Planship metered lever has one or more *metering IDs*. If a metered lever has multiple *metering IDs*, it will aggregate all usage reported for the *IDs* for a given customer.
 
-!!! Example
+!!! example
     Imagine a product priced by monthly API call volume where the number of GETs and POSTs are tracked individually in addition to the total volume. To accomplish this with Planship, you could define a *get-api-calls* lever that tracks usage reported with a `get-call` metering ID, a *post-api-calls* lever that tracks usage reported with a `post-call` metering ID, and a *total-api-calls* lever that tracks both `get-call` and `post-call` metering IDs.
 
 In addition, a *metering ID* can be used by multiple metered levers. This allows for aggregation of the same raw usage in different ways (E.g. different aggregation periods).
 
-!!! Example
+!!! example
     Imagine an accounting product that offers different pricing tiers based on the volume of invoices issued per month with additional daily caps. To accomplish this with Planship, you could define two metered levers, *monthly-invoices* and *daily-invoices*, that track the same metering ID, *invoice*, with *monthly-invoices* configured to aggregate monthly while *daily-invoices* aggregates daily. With the two levers defined, separate entitlements for monthly and daily limits can be defined on individual plans.
 
 ### Aggregation options
@@ -64,7 +64,7 @@ The aggregation formula defines how usage is aggregated. It should be set to the
 - *Usage per bucket* - aggregate usage per bucket
 - *Unique buckets* - count unique bucket names across metering records
 
-!!! Example
+!!! example
     Imagine a product where pricing is based on monthly active API users. To accomplish this with Planship, you could define a *monthly-active-users* metered lever that uses the *unique buckets* formula and tracks a metering ID called *api-call*. The product would then [report API calls to Planship](../integration/usage.md#reporting-bucketed-usage) along with a unique user identifier (E.g. ID or email address) passed as *bucket*.
 
 #### Period
@@ -79,5 +79,5 @@ The aggregation period defines the time boundary for aggregation of metering rec
 
 Scope defines whether usage should be aggregated per customer or per subscription, which can include multiple customers. By default, the aggregation scope is set to the subscription level. Changing the aggregation scope is meaningful only in [team subscriptions](plans.md#individual-vs-team-subscriptions).
 
-!!! Example
+!!! example
     Imagine a file processing service with pricing tiers that limit the number of files uploaded by individual team members (I.e. subscription customers) per day as well as the number of seats per subscription. To implement this in Planship, you could define a _files-per-customer_ metered lever that tracks a *file-upload* metering ID, and aggregate it using the _total usage_ per day (_custom_ period) formula with a per-customer aggregation scope. The seat limit would be defined in the [plan configuration](plans.md#subscriber-limits-teams-and-seats).

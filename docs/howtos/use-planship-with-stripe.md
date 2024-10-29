@@ -1,48 +1,46 @@
 # Using Planship with Stripe
 
-In this guide, we'll walk through how to use Planship with [Stripe](https://stripe.com) using [Planship Stripe app]. Let's get started.
+In this guide, we'll walk through how to use Planship with [Stripe](https://stripe.com) using the [Planship app for Stripe]. Let's get started.
 
-## Why would I use Planship with Stripe?
+## Why should I use Planship with Stripe?
 
-Stripe is the most popular billing solution used by SaaS companies today. If you are building a SaaS product you likely accept payments from your customers using Stripe, or another pricing solution that uses Stripe under the hood.
+Stripe is the most popular billing solution for SaaS companies today. If you're building a SaaS product you likely accept payments with Stripe or use a pricing solution that relies on Stripe under the hood.
 
-While Stripe makes it super easy to setup both subscription and usage based billing, developers often need to implement additional pricing logic to support tiered subscription plans, report usage, enforce feature and usage entitlements and more.
+While Stripe makes it easy to add subscription and usage-based billing schemes to SaaS products, developers still have to build lots of additional logic to handle related functionality that falls outside of Stripe's offering - things like plan-defined feature entitlements and usage-based limits, team subscriptions, usage aggregation, customer provisioning, subscription data models, upsell logic, etc.
 
-Planship delivers all of this functionality while seemlessly integrating with Stripe - no changes to the existing Stripe configuration or integration code required.
+Planship delivers this additional functionality while seemlessly integrating with Stripe - no changes to your existing Stripe configuration or integration code required.
 
 ## How does it work?
 
-Planship app for Stripe lets you define [***feature***](../concepts/feature-levers.md) and [***metered***](../concepts/metered-levers.md) levers, and configure [***entitlements***](../concepts/plans.md#entitlements) for your Stripe products, all directly from the Stripe UI.
+Once your Planship and Stripe accounts are connected, Planship will automatically mirror all of your Stripe products, customers, and subscriptions.
+
+You can then define [***feature***](../concepts/feature-levers.md) and [***metered***](../concepts/metered-levers.md) levers and configure [***entitlements***](../concepts/plans.md#entitlements) for your Stripe products, all directly from the Stripe UI.
 
 <figure markdown="span">
-  ![Stripe dashboard screenshot showing Planship 'Entitlements' view for the 'Small business' product](../assets/screenshots/how-tos/use-planship-with-stripe/entitlements.png){ width="600" }
+  ![Stripe dashboard screenshot showing the Planship 'Entitlements' view for a Stripe product named 'Small business'](../assets/screenshots/how-tos/use-planship-with-stripe/entitlements.png){ width="600" }
   <figcaption>Planship Entitlements for Stripe</figcaption>
 </figure>
 
-
-With entitlements defined, you can use any Planship SDK of your choice to retrieve and enforce entitlements, report and retrieve usage information, manage team subscriptions and more.
+With entitlements defined, you can use the Planship SDK of your choice within your product to retrieve and enforce entitlements, report and retrieve usage information, manage team subscriptions, and more.
 
 <figure markdown="span">
   ![Screenshot of a code editor showing a Planship entitlements code snippet written in JavaScript](../assets/screenshots/how-tos/use-planship-with-stripe/entitlements-code-sample.png){ width="600" }
   <figcaption>Planship entitlements with autocomplete </figcaption>
 </figure>
 
-What's more, Planship automatically mirrors all of your Stripe products, customers and subscriptions. so once Planship and Stripe accounts are connected, everything is on auto-pilot.
-
 ## Getting started
 
-To get started, install Planship app from the Stripe marketplace into your Stripe account.
-Next, open Planship app from the app drawer and sign into your Planship account, or sing-up for a new account.
+To get started, install the Planship app from the Stripe marketplace into your Stripe account. Next, open the Planship app from the app drawer and sign into your Planship account or create a new account.
 
 <figure markdown="span">
-  ![Screenshot of a sign-in view of the Planship app for Stripe](../assets/screenshots/how-tos/use-planship-with-stripe/signin.png){ width="600" }
+  ![Screenshot of the sign-in view of the Planship app for Stripe](../assets/screenshots/how-tos/use-planship-with-stripe/signin.png){ width="600" }
   <figcaption>Planship sign-in view</figcaption>
 </figure>
 
-Once you are singed in and the accounts are connected, Planship will automatically create a new [organization](../concepts/products.md#organizations) for your Stripe account, and mirror all of your products, customers and subscriptions (as Planship [plans](../concepts/plans.md), [customers](../concepts/customers.md) and subscriptions respectively).
+Once you've signed in and your Planship and Stripe accounts are connected, Planship will automatically create a new Planship [organization](../concepts/products.md#organizations) for your Stripe account, mirroring all of your products, customers, and subscriptions as Planship [plans](../concepts/plans.md), [customers](../concepts/customers.md), and [subscriptions](../concepts/plans/#subscribing-and-unsubscribing-customers) respectively.
 
-!!!note
-    Planship will continue to mirror your Stripe resources using Stripe webhooks as long as Stripe and Planship are connected, and even if you are not signed into the Planship app.
+!!! note
+    Planship will continue to mirror your Stripe resources using Stripe webhooks as long as Stripe and Planship are connected, even when you are not signed into the Planship app.
 
 You are now ready to define Planship levers and entitlements.
 
@@ -53,16 +51,16 @@ You are now ready to define Planship levers and entitlements.
 
 ## Step 1 - Define levers
 
-First, you need to define [***feature***](../concepts/feature-levers.md) and [***usage***](../concepts/metered-levers.md) levers that represent dimensions that you price on. To manage levers, navigate to your Product catalog by clicking the **Products** link in the Planship app default view, or Stripe's **Product catalog** link.
+First, you need to define [***feature***](../concepts/feature-levers.md) and [***usage***](../concepts/metered-levers.md) levers that represent your pricing dimensions. To do this, navigate to your Product catalog by clicking the **Products** link in the Planship app's default view or Stripe's **Product catalog** link.
 
-Once you are in Stripe's products view, the Planship will app will display the  **Levers** view where can see a view and manage of your existing levers.
+Once you're on Stripe's products view, the Planship app will display the **Levers** view where you can view and manage  your existing levers.
 
 <figure markdown="span">
   ![Screenshot showing the levers view of the Planship app for Stripe](../assets/screenshots/how-tos/use-planship-with-stripe/levers.png){ width="600" }
   <figcaption>Planship levers view</figcaption>
 </figure>
 
-To create a new lever, click the **New lever** button and configure the lever by choosing its name, type, and additional settings like default value. Once done, click the **Create** button to save changes.
+To create a new lever, click the **New lever** button and configure the lever by specifying its name, type, and additional settings like its default value. Once done, click the **Create** button to save your changes.
 
 <figure markdown="span">
   ![Screenshot showing the levers view of the Planship app for Stripe](../assets/screenshots/how-tos/use-planship-with-stripe/create-lever.png){ width="600" }
@@ -78,7 +76,7 @@ With levers defined, you can now configure feature and usage [***entitlements***
   <figcaption>Product entitlements</figcaption>
 </figure>
 
-By default, every product has only _implicit entitlements_ that are set to default configured for their corresponding levers. To override a default value, click an _implicit entitlement_, configure its value, and click the **Create** button to create the new _explicit entitlement_.
+By default, every product has _implicit entitlements_ that are set to the default values configured in their corresponding levers. To override a default, implied value, click an _implicit entitlement_, configure its value, and click the **Create** button to create a new _explicit entitlement_.
 
 <figure markdown="span">
   ![Screenshot showing the creation of an explicit entitlement in the Planship app for Stripe](../assets/screenshots/how-tos/use-planship-with-stripe/create-entitlement.png){ width="600" }
@@ -87,13 +85,13 @@ By default, every product has only _implicit entitlements_ that are set to defau
 
 Existing _explicit entitlements_ can be modified or deleted in the same way.
 
-!!!note
+!!! note
     Removing an _explicit entitlement_ turns it into an _implicit_ one that carries the default value of its corresponding lever.
 
 
 ## Step 3 - Add Planship integration to your product code
 
-With levers and entitlements defined, you can integrate Planship into your product code by following our [integration guide](../integration/index.md#step-2-integrate-planship-into-your-product-code). Please note, that when using Planship with Stripe you won't need to register customers and create/delete their subscriptions via Planship API. Customers and subscriptions are managed by Stripe, and automatically mirrored by Planship.
+With levers and entitlements defined, you can integrate Planship into your product code by following our [integration guide](../integration/index.md#step-2-integrate-planship-into-your-product-code). Please note that when using Planship with Stripe you don't need to register customers or create/delete their subscriptions via the Planship API. Customers and subscriptions are managed by Stripe and automatically mirrored by Planship.
 
 - [Choosing the right Planship SDK for your project](../integration/index.md#choosing-the-right-sdk-for-your-project)
 - [Retrieving customer entitlements](../integration/entitlements.md)

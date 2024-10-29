@@ -2,7 +2,7 @@
 
 Feature levers allow or limit access to certain features of your product according to a customer's subscription plan. In Planship, this is accomplished by the combination of _levers_ that define features and default values and [_entitlements_](plans.md#entitlements) that specify specific limits or allowances for these levers on individal plans.
 
-!!! Example
+!!! example
     Imagine a product that does parallel processing of customer data, where different pricing tiers offer different levels of processing concurrency. To accomplish this with Planship, you would define an *execution-concurrency* lever and then create entitlements that specify desired *execution-concurrency* values on different plans (E.g. `1`, `10`, and `100` on "Free," "Personal," and "Business" plans respectively).
 
 ## Creating a lever
@@ -25,7 +25,7 @@ Planship comes with a number of built-in feature types to support feature levers
 
 A simple flag to indicate whether a given feature is available on a given plan or not.
 
-!!! Tip
+!!! tip
     A feature flag lever can be implicily turned on or off across all plans by setting the lever's default value to `true` or `false`.
 
 #### Integer

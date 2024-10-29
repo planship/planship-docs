@@ -40,7 +40,7 @@ Once signed in, navigate to the desired organization (E.g. the default organizat
 
 The name that we choose for our new product is important as Planship will use it to generate a product `slug` (E.g. 'My product' -> `my-product`). The product `slug` is the unique identifer of a product in Planship API operations.  For instance, we will use it to identify the product when [initializing the Planship API client](../integration/index.md#getting-started-with-planship-sdks).
 
-!!!note
+!!! note
     The Planship API uses `slugs` to identify resources like `products`, `plans`, and `levers`, and they are unique within the scope of their parent and type. Please note that changing a `product`, `plan`, or `lever` name will result in a change of its `slug`, which will likely break your existing Planship SDK integration unless a refactor is performed.
 
 Now, navigate to the newly created product by clicking its name.
@@ -53,7 +53,7 @@ The new product is empty; it has no plans or levers defined in it. Let's start b
 
 On the product page, switch to the *Levers* tab, and click the *New lever* button. This will open the *Create a lever* dialog. Enter a name for the new lever (*Integrations*), and select *List* as the lever type.
 
-!!!note
+!!! note
     Just like the product, the new lever's name will be used by Planship to generate a `slug` that will become the unique identifier for it in Planship API operations. For instance, lever slugs are used as keys in the [entitlements dictionary returned by Planship](../integration/entitlements.md).
 
 <figure markdown="span">

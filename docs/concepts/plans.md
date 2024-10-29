@@ -25,9 +25,9 @@ By default, every plan subscription is limited to a single customer. This limit 
 
 ## Subscribing and unsubscribing customers
 
-A customer can be subscribed to a plan by either creating a new plan subscription for them, adding them to an existing subscription (e.g. a team subscription), or changing a plan on one of their active subscriptions.
+A customer can be subscribed to a plan by either creating a new plan subscription for them, adding them to an existing subscription (E.g. a team subscription), or changing a plan on one of their active subscriptions.
 
-Similarily, customers can be unsubscribed from a plan by deleting their active subscription, removing them from a subscription (e.g. a team subscription), or by letting their active subscription expire (no auto-renew) or renew to a different plan.
+Similarily, customers can be unsubscribed from a plan by deleting their active subscription, removing them from a subscription (E.g. a team subscription), or by letting their active subscription expire (no auto-renew) or renew to a different plan.
 
 ## Individual vs. team subscriptions
 

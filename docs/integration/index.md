@@ -4,9 +4,8 @@
 
 To get started, sign into the [Planship Console](https://app.planship.io/auth/sign-in). If you don't have a Planship account yet, [sign up](https://app.planship.io/auth/sign-up) now.
 
-!!!tip "Using Stripe?"
-    If you use Stripe, you can manage all of your Planship directly from the Stripe dashboard by using the Planship app for Stripe. Follow our [Stripe integration HOWTO guide](../howtos/use-planship-with-stripe.md) to get started.
-
+!!! question "Using Stripe?"
+    If you use Stripe, you can manage your Planship integration directly from the Stripe dashboard by using the Planship app for Stripe. Follow our [Stripe integration HOW-TO guide](../howtos/use-planship-with-stripe.md) to get started.
 
 In the console, you'll do the following:
 
@@ -15,8 +14,8 @@ In the console, you'll do the following:
 - Create [plans](../concepts/plans.md) that map to your recurring subscription plans, one-off packages, add-ons, etc.
 - Apply pricing levers to individual plans by defining [entitlements](../concepts/plans.md#entitlements).
 
-!!!tip "Want guidance?"
-    If you're new to Planship, you can follow our [Planship Console walkthrough HOWTO guide](../howtos/console-step-by-step.md) for a step-by-step guide on creating products, plans, levers, and entitlements.
+!!! info "Looking for guidance?"
+    If you're new to Planship, you can follow our [Planship Console step-by-step HOW-TO guide](../howtos/console-step-by-step.md) for a step-by-step guide on creating products, plans, levers, and entitlements.
 
 <figure markdown="span">
   ![Plans view of the Planship app showing a list of plans along with the details of the selected plan named 'Personal'](../assets/screenshots/23-plans-view.png){ width="600" }
@@ -39,7 +38,7 @@ Planship offers API client libraries for a number of languages including JavaScr
 
 [Let us know if there's a language or framework you'd like for us to officially support](mailto:connect@planship.io).
 
-!!!tip
+!!! tip
     If the language or framework you use isn't currently supported by one of our SDKs, or you would rather build your own library, you can generate a Planship API client from our [OpenAPI spec](https://api.planship.io/openapi.json) using a generator like [openapi-generator](https://github.com/OpenAPITools/openapi-generator/tree/master).
 
 
@@ -77,7 +76,7 @@ The Planship API uses token-based authentication where access tokens are obtaine
   <figcaption>Managing products and credentials</figcaption>
 </figure>
 
-!!!info
+!!! info
     Since Planship API calls are authenticated by tokens rather than API keys, Planship can be securly integrated into your client-side code (E.g. browser) without compromising application secrets.
 
 ### Getting started with Planship SDKs

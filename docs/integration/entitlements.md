@@ -31,8 +31,8 @@ Once a customer is [registered with Planship](customers.md) and [subscribed to o
         customer.getId() // customer ID
     )
     ```
-!!! tip "Using Stripe?"
-    If you use the Planship Stripe app, the customer ID is your Stripe customer ID prefixed with **`stripe:`**, e.g. **`stripe:cus_Qv7TP2s0BZ6XAV`** for Stripe customer **`cus_Qv7TP2s0BZ6XAV`**.
+!!! question "Using Stripe?"
+    If you use the Planship Stripe app, the customer ID is your Stripe customer ID prefixed with **`stripe`**:, e.g. **`stripe:cus_Qv7TP2s0BZ6XAV`** for Stripe customer **`cus_Qv7TP2s0BZ6XAV`**.
 
 Entitlements are returned as a dictionary containing all feature and metered entitlements for the customer according to their current subscriptions. Entitlement values for individual levers are keyed by lever slugs.
 
@@ -85,8 +85,7 @@ Entitlements are returned as a dictionary containing all feature and metered ent
     }
     ```
 
-!!!note
-
+!!! note
     Metered lever entitlement values represent the amount of metered usage available to a customer. For instance, if a customer has a limit of 100 SMS messages per subscription period, and they've already used 25 messages in the current period, the entitlements value for the lever (`subscription-sms-messages`) will be 75. If you'd like to get the current usage for a customer, see [`getLeverUsage`](usage.md#check-current-usage).
 
 ### Receiving entitlements via a WebSocket connection
