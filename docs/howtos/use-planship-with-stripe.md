@@ -37,7 +37,7 @@ To get started, install the Planship app from the Stripe marketplace into your S
   <figcaption>Planship sign-in view</figcaption>
 </figure>
 
-Once you've signed in and your Planship and Stripe accounts are connected, Planship will automatically create a new Planship [organization](../concepts/products.md#organizations) for your Stripe account, mirroring all of your products, customers, and subscriptions as Planship [plans](../concepts/plans.md), [customers](../concepts/customers.md), and [subscriptions](../concepts/plans/#subscribing-and-unsubscribing-customers) respectively.
+Once you've signed in and your Planship and Stripe accounts are connected, Planship will automatically create a new Planship [organization](../concepts/products.md#organizations) for your Stripe account, mirroring all of your products, customers, and subscriptions as Planship [plans](../concepts/plans.md), [customers](../concepts/customers.md), and [subscriptions](../concepts/plans.md#subscribing-and-unsubscribing-customers) respectively.
 
 !!! note
     Planship will continue to mirror your Stripe resources using Stripe webhooks as long as Stripe and Planship are connected, even when you are not signed into the Planship app.
