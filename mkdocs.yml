@@ -5,6 +5,8 @@ plugins:
   - search
   - neoteroi.mkdocsoad:
       use_pymdownx: true
+  - glightbox:
+      touchNavigation: false
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -19,6 +21,9 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - tables
+  - toc:
+      # Set to empty because we style this ourselves (stylesheets/github-permalink-style.css)
+      permalink: ''
 nav:
   - Guide:
     - Welcome to Planship: index.md
@@ -34,9 +39,9 @@ nav:
       - Usage/metered levers: concepts/metered-levers.md
       - Plans: concepts/plans.md
       - Customers: concepts/customers.md
-    - HOWTOs:
-      - Define a product in Planship Console: howtos/console-step-by-step.md
-      - Use Planship with Stripe: howtos/use-planship-with-stripe.md
+    - How to:
+      - Define a product in Planship: howtos/console-step-by-step.md
+      # - Use Stripe with Planship: howtos/use-planship-with-stripe.md
   - Reference:
     - REST API reference: main-api/reference.md
 theme:
@@ -54,19 +59,22 @@ theme:
     - content.code.copy
     - navigation.footer
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: custom
       accent: custom
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/weather-night
         name: Switch to dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: black
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-sunny
         name: Switch to light mode
 extra:
   homepage: https://planship.io
 extra_css:
   - stylesheets/extra.css
   - stylesheets/output.css
+  - stylesheets/github-permalink-style.css

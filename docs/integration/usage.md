@@ -41,7 +41,7 @@ If metered usage is a pricing dimension of your product and you've defined one o
     ```
 
 !!! question "Using Stripe?"
-    If you use the Planship Stripe app, the customer ID is your Stripe customer ID prefixed with **`stripe`**: (E.g. **`stripe:cus_Qv7TP2s0BZ6XAV`** for Stripe customer **`cus_Qv7TP2s0BZ6XAV`**).
+    If you use the Planship Stripe app, the customer ID is your Stripe customer ID prefixed with **`stripe`** (E.g. **`stripe:cus_Qv7TP2s0BZ6XAV`** for Stripe customer **`cus_Qv7TP2s0BZ6XAV`**).
 
 Every time usage is reported, Planship creates a metering record for traceability. Metering records are automatically processed and aggregated in the background and included in the totals for all usage levers with a matching *metering ID*.
 

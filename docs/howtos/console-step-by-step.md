@@ -4,7 +4,7 @@ In this guide, we'll walk through how to add a hypothetical product in the Plans
 
 ## Our hypothetical product
 
-For the purpose of this guide, we'll model a hypothetical product capable of sending notifications via *Email*, *Slack* and *SMS*. The product is offered via auto-renewing subscription plans that provide tiered access to product functionality.
+For the purpose of this guide, we'll model a hypothetical product capable of sending notifications via *Email*, *Slack* and *SMS*. The product will offer auto-renewing subscription plans that provide tiered access to product functionality as follows:
 
 | Free                              | Personal                          | Team                                |
 | :-------------------------------: | :-------------------------------: | :---------------------------------: |
@@ -15,13 +15,13 @@ For the purpose of this guide, we'll model a hypothetical product capable of sen
 
 ### Identifying Planship levers
 
-With the plans defined above, we can identify three pricing dimensions of our product:
+From the plans above, we can identify three pricing dimensions of our product:
 
 - Available integrations (*Email*, *Slack*, and/or *SMS*)
 - Maximum number of notifications per month
 - Notification message size limit
 
-Understanding the dimensions is critical because they directly correspond to Planship feature and metered levers. In turn, correctly defined Planship levers will enable us to apply appropriate entitlements to various plans, and enforce these entitlements in our product code. The dimensions that we identified will map to the following Planship levers.
+Understanding the dimensions is critical because they directly correspond to Planship feature and metered levers. In turn, correctly defined Planship levers will enable us to apply appropriate entitlements to various plans and enforce these entitlements in our product code. The dimensions that we identified will map to the following Planship levers.
 
 1. **Integrations** - [feature lever](../concepts/feature-levers.md) of *list* type
 2. **Notifications per period** - [metered lever](../concepts/metered-levers.md) with *total usage per subscription period* aggregation formula
