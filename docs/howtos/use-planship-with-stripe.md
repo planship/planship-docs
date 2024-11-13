@@ -1,6 +1,6 @@
 # Using Planship with Stripe
 
-In this guide, we'll walk through how to use Planship with [Stripe](https://stripe.com) using the [Planship app for Stripe]. Let's get started.
+In this guide, we'll walk through how to use Planship with [Stripe](https://stripe.com) using the [Planship app for Stripe](https://marketplace.stripe.com/apps/planship). Let's get started.
 
 ## Why should I use Planship with Stripe?
 
